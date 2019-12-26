@@ -29,7 +29,7 @@ Namespace DXSample
 
         Private Sub advBandedGridView1_CustomDrawColumnHeader(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Grid.ColumnHeaderCustomDrawEventArgs) Handles advBandedGridView1.CustomDrawColumnHeader
             Dim view As AdvBandedGridView = TryCast(sender, AdvBandedGridView)
-            If e.Column = view.FocusedColumn Then
+            If e.Column Is view.FocusedColumn Then
                 e.Info.State = ObjectState.Hot
             End If
         End Sub
